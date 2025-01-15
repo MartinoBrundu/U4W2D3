@@ -1,12 +1,15 @@
 package Books;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Prodotti {
-    private Long  id ;
+    private long  id ;
     private String name;
     private String category;
-    private Double price;
+    private double price;
 
-    public Prodotti (long id, String n, String cate, Double p) {
+    public Prodotti (long id, String n, String cate, double p) {
         this.id= id;
         this.name= n;
         this.category= cate;
@@ -47,8 +50,13 @@ public class Prodotti {
         this.price = price;
     }
 
-
-    public void Stampa (){
-        System.out.print("ID" + id, "nome" + name , "Categoria"+ category , "prezzo" + price);
+    @Override
+    public String toString() {
+        return "Prodotti{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
